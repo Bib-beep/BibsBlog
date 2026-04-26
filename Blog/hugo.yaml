@@ -1,0 +1,4 @@
+baseURL: "https://bib-beep.github.io/BibsBlog/"
+locale: en-us
+title: Bib's Blog
+theme: ["PaperMod"]

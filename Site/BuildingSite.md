@@ -46,9 +46,39 @@ Let's get started.
 
 ## Using Hugo
 
-Reading the documentation for Hugo, it looks like I'll need to download this tool. I'm not a big fan of downloading stuff onto my devices (unless absolutely necessary) so I figured maybe use a virtual machine to deploy. Then again, it seemed quite overkill to do it this way so I've gone ahead and decided to containerize it using Docker.
+Reading the documentation for Hugo, it looks like I'll need to install this tool. I'm not a big fan of installing stuff onto my systems (unless absolutely necessary) so I figured maybe use a virtual machine to deploy all of this. Then again, it seemed quite overkill to do it this way so I've gone ahead and decided to run it all through Docker.
 
-### Using Docker
+Technically Docker will download an image if it's not already downloaded on my machine. So when I run Hugo commands, there is a Hugo container being used that was downloaded from an external repository. However, the beauty of using Docker in this case is that it is containerized into a singular image that I can use as a container to run my Hugo commands. After I'm satisfied, I can always delete the image from my system.
+
+> Random Bystander: Oh but surely you can just install it onto your system and then remove it afterwards no?
+
+> Me: Yes, but I prefer the isolation of the package into a singular image rather than it living in my system. Also, I've had trauma in the past with random dependencies and leftover files floating in my system until I notice it again - so Docker it is.
+
+### Using Docker to Create Site
+
+First step is to create my Hugo boilerplate site. Again, this step requires running Hugo, but I can run it on a Hugo container.
+
+I've decided to use the PaperMod theme:
+- https://themes.gohugo.io/themes/hugo-papermod/
+
+Following the documentation I'll need to create a new site:
+
+```
+hugo new site MyFreshWebsite --format yaml
+```
+
+In Docker, this will look as follows:
+
+```
+docker run --rm -v "$PWD":/src -w /src ghcr.io/gohugoio/hugo:latest new site Blog --format yaml
+```
+
+After running, my boilerplate Hugo site has been created. Now I'll need to install the PaperMod theme.
+
+The recommended approach is to use git submodule, as I already have git installed I can just run these steps normally.
+
+
+
 
 Quick pit-stop to setup a Dockerfile and run it through it that way. Fortunately, a Docker image already exists for Hugo:
 
