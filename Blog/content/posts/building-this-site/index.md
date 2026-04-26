@@ -129,4 +129,6 @@ jobs:
       - uses: actions/deploy-pages@v4
 ```
 
-To write a new post, I just create a markdown file under `Blog/content/posts/`, commit it, and push. The site updates automatically within a minute or two.
+To write a new post, I just create a markdown file under `Blog/content/posts/`, commit it, and push. The site updates automatically within a minute or two. If you'd like to take a look, the repo is here:
+
+- https://github.com/Bib-beep/BibsBlog
