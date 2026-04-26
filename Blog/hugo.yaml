@@ -1,4 +1,4 @@
-baseURL: "https://bib-beep.github.io/BibsBlog/"
+baseURL: "https://bibsblog.com/"
 locale: en-us
 title: Bib's Blog
 theme: ["PaperMod"]
