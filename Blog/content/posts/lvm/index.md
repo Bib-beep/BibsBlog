@@ -16,7 +16,7 @@ LVM provides an abstraction layer between the physical storage and the file syst
 - Use arbitrary disk space.
 - etc...
 
-![lvm](/lvm-image.png)
+![lvm](lvm-image.png)
 
 ## LVM Components
 
