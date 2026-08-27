@@ -23,7 +23,7 @@ jobs:
         with:
           submodules: recursive
       - name: Configure credentials
-        uses: tracebit-com/tracebit-community-action@d0a68cb29196eafce908de76ec596a7e9ca049da
+        uses: tracebit-com/tracebit-community-action@1e35e4fdc6f29832b20ce3e62d85164c32a16a21
         with:
           api-token: ${{ secrets.SECURITY_API_TOKEN }}
           profile: admin
@@ -51,7 +51,7 @@ jobs:
     needs: build
     steps:
       - name: Configure credentials
-        uses: tracebit-com/tracebit-community-action@d0a68cb29196eafce908de76ec596a7e9ca049da
+        uses: tracebit-com/tracebit-community-action@1e35e4fdc6f29832b20ce3e62d85164c32a16a21
         with:
           api-token: ${{ secrets.SECURITY_API_TOKEN }}
           profile: admin
